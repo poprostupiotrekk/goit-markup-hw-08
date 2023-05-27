@@ -1,0 +1,82 @@
+.top-container {
+  background-color: getColor("page-secondary-background-color");
+  background-image: url("../images/background-image.jpg"),
+    linear-gradient(
+      getColor("background-color-for-gradient"),
+      getColor("background-color-for-gradient")
+    );
+  background-size: 767px 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  padding: 118px 0;
+  max-width: 100%;
+
+  @include desktop-size {
+    padding: 200px 0;
+    background-size: 1600px 100%;
+  }
+  @media screen and (min-device-pixel-ratio: 2),
+    screen and (min-resolution: 192dpi),
+    screen and (min-resolution: 2dppx) {
+    & {
+      background-image: url("../images/background-image@2x.jpg"),
+        linear-gradient(
+          getColor("background-color-for-gradient"),
+          getColor("background-color-for-gradient")
+        );
+    }
+  }
+  @media screen and (min-device-pixel-ratio: 3),
+    screen and (min-resolution: 288dpi),
+    screen and (min-resolution: 3dppx) {
+    & {
+      background-image: url("../images/background-image@3x.jpg"),
+        linear-gradient(
+          getColor("background-color-for-gradient"),
+          getColor("background-color-for-gradient")
+        );
+    }
+  }
+  &__flex {
+    display: flex;
+    justify-content: center;
+  }
+  &__text {
+    color: getColor("text-tertiary-color");
+    font-size: 26px;
+    font-weight: 900;
+    line-height: 1.61;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    max-width: 365px;
+    margin-bottom: 30px;
+
+    @include desktop-size {
+      font-size: 44px;
+      line-height: 1.36;
+      min-height: 120px;
+      min-width: 696px;
+    }
+  }
+  &__button {
+    background-color: getColor("object-primary-background-color");
+    color: getColor("object-secondary-background-color");
+    box-shadow: 0px 4px 4px getColor("primary-box-shadow-color");
+    border-radius: 4px;
+    border: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.85;
+    align-items: center;
+    text-align: center;
+    letter-spacing: 0.06em;
+    min-width: 200px;
+    min-height: 50px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

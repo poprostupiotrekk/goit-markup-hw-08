@@ -1,0 +1,44 @@
+.offer {
+  display: none;
+  @include desktop-size {
+    display: flex;
+    background-color: getColor("page-quarternary-background-color");
+
+    &__heading {
+      color: getColor("text-primary-color");
+      font-size: 36px;
+      line-height: 1.16;
+      text-align: center;
+      letter-spacing: 0.03em;
+      margin-bottom: 50px;
+      background-color: getColor("page-quarternary-background-color");
+    }
+    &__list {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 15px;
+      margin-top: 50px;
+    }
+
+    &__image {
+      position: relative;
+      max-width: 370px;
+    }
+    &__label {
+      position: absolute;
+      text-align: center;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      padding: 27px 0;
+      background-color: getColor("image-title-background-color");
+      color: getColor("text-tertiary-color");
+    }
+  }
+}

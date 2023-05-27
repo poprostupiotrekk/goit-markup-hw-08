@@ -1,0 +1,32 @@
+$colors: (
+  "page-primary-background-color": #e5e5e5,
+  "page-secondary-background-color": #2f303a,
+  "page-tertiary-background-color": #f5f4fa,
+  "page-quarternary-background-color": #fff,
+  "object-primary-background-color": #2196f3,
+  "object-secondary-background-color": #ffffff,
+  "border-color": #eeeeee,
+  "text-primary-color": #212121,
+  "text-secondary-color": #757575,
+  "text-tertiary-color": #ffffff,
+  "text-quaternary-color": #000000,
+  "alpha-color": #ffffff99,
+  "primary-box-shadow-color": #00000026,
+  "secondary-box-shadow-color": #0000001f,
+  "tertiary-box-shadow-color": #00000024,
+  "quarternary-box-shadow-color": #00000033,
+  "header-border-bottom-color": #ececec,
+  "background-color-for-gradient": rgba(47, 48, 58, 0.4),
+  "parrent-color": currentColor,
+  "social-links-primary-icon-color": #afb1b8,
+  "social-links-secondary-icon-color": #ffffff,
+  "social-links-icon-hover-color": #ffffff,
+  "social-links-primary-background-color": #2196f3,
+  "social-links-footer-background-color": rgba(255, 255, 255, 0.1),
+  "image-title-background-color": rgba(47, 48, 58, 0.8),
+  "overlay-background-color": #2196f3e5,
+  "backdrop-background-color": #00000033,
+);
+@function getColor($key) {
+  @return map-get($colors, $key);
+}

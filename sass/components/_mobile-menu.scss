@@ -1,0 +1,120 @@
+.menu-toggle {
+  background-color: inherit;
+  border: none;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  @include tablet-size {
+    display: none;
+  }
+  &__icon {
+    fill: getColor("text-primary-color");
+    cursor: pointer;
+    transition-property: fill;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      fill: getColor("object-primary-background-color");
+    }
+  }
+}
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: getColor("object-secondary-background-color");
+  z-index: 1001;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition-property: transform;
+  transition-duration: 800ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include tablet-size {
+    display: none;
+  }
+  &.menu-toggle {
+    position: absolute;
+  }
+  &.is-open {
+    transform: translateX(0);
+  }
+  &__flex {
+    display: flex;
+    flex-direction: column;
+    row-gap: 64px;
+  }
+  &__list {
+    display: flex;
+    flex-direction: column;
+    padding-top: 48px;
+    padding-left: 40px;
+    font-weight: 500;
+    font-size: 40px;
+    line-height: 1.175;
+    letter-spacing: 0.02em;
+  }
+  &__item {
+    margin-bottom: 32px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+    &--social {
+      padding-right: 10px;
+      border-right: 1px solid rgba(33, 33, 33, 0.2);
+      margin-bottom: 0;
+      &:last-child {
+        border: none;
+      }
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: getColor("text-primary-color");
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: getColor("object-primary-background-color");
+    }
+
+    &--tel {
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 1.176;
+      letter-spacing: 0.02em;
+      color: getColor("object-primary-background-color");
+    }
+    &--mail {
+      color: getColor("text-secondary-color");
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 1.166;
+      letter-spacing: 0.02em;
+    }
+    &--social {
+      color: getColor("object-primary-background-color");
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 1.22;
+      letter-spacing: 0.02em;
+    }
+  }
+
+  &__socials {
+    padding-bottom: 48px;
+    display: flex;
+    column-gap: 10px;
+    flex-wrap: wrap;
+  }
+}

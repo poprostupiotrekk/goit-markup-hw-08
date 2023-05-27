@@ -1,0 +1,37 @@
+.filters {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 50px;
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    column-gap: 8px;
+    padding-left: 0;
+  }
+  /*portfolio buttons stylization*/
+  &__button {
+    background-color: getColor("page-tertiary-background-color");
+    color: getColor("text-primary-color");
+    border: 0;
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.06em;
+    cursor: pointer;
+    padding: 6px 22px;
+    transition-property: color, background-color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Pseudo-classes hover and focus change font color, buttons' background and make a shadow for buttons*/
+    &:hover,
+    &:focus {
+      background-color: getColor("object-primary-background-color");
+      color: getColor("object-secondary-background-color");
+      box-shadow: 0px 4px 4px getColor("primary-box-shadow-color");
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.team {
+  background-color: getColor("page-tertiary-background-color");
+  width: 100%;
+
+  &__heading {
+    color: getColor("text-primary-color");
+    font-size: 28px;
+    line-height: 1.178;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin-bottom: 30px;
+
+    @include desktop-size {
+      margin-bottom: 50px;
+      font-size: 36px;
+      line-height: 1.16;
+    }
+  }
+  &__list {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 15px;
+
+    @include desktop-size {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+    }
+  }
+  &__item {
+    background-color: getColor("object-secondary-background-color");
+    box-shadow: 0px 1px 3px getColor("secondary-box-shadow-color"),
+      0px 1px 1px getColor("tertiary-box-shadow-color"),
+      0px 2px 1px getColor("quarternary-box-shadow-color");
+    border-radius: 0px 0px 4px 4px;
+    max-width: 450px;
+
+    @include tablet-size {
+      max-width: 354px;
+    }
+    @include desktop-size {
+      max-width: 270px;
+    }
+  }
+
+  &__name {
+    color: getColor("text-primary-color");
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin: 30px auto 10px;
+  }
+  &__role {
+    color: getColor("text-secondary-color");
+    font-size: 16px;
+    line-height: 1.18;
+    text-align: center;
+    letter-spacing: 0.03em;
+    margin: 10px auto 16px;
+  }
+}

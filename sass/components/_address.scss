@@ -1,0 +1,43 @@
+.address {
+  display: flex;
+  flex-direction: column;
+
+  &--start {
+    @include desktop-size {
+      margin-right: 70px;
+    }
+  }
+
+  /*contact part of footer*/
+  &__list {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    padding-left: 0;
+    margin-bottom: 60px;
+
+    @include desktop-size {
+      row-gap: 9px;
+      padding-left: 15px;
+      margin-bottom: 0;
+    }
+  }
+  &__link {
+    color: getColor("alpha-color");
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    font-style: normal;
+    gap: 9px;
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+      color: getColor("text-tertiary-color");
+    }
+  }
+}
